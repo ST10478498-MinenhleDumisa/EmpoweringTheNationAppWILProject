@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { StyleSheet, SafeAreaView, View, Text } from "react-native";
 import { StatusBar } from "expo-status-bar";
-import Navigation from "./type/navigation"
-import { useNavigation } from "@react-navigation/native";
+import Navigation from "./type/navigation";
 import HomeScreen from "./screens/HomeScreen";
 import SixMonthCourseScreen from "./screens/SixMonthCourseScreen";
 import SixWeekCourseScreen from "./screens/SixWeekCourseScreen";  
