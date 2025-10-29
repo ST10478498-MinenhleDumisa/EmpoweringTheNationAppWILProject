@@ -57,7 +57,6 @@ const HomeScreen: React.FC<HomeScreenProps> = ({ setCurrentScreen, previousScree
                     </Text>
                 </View>
 
-                {/* Course Buttons */}
                 <View style={homeStyles.buttonRow}>
                     <TouchableOpacity 
                         style={homeStyles.courseButton}
