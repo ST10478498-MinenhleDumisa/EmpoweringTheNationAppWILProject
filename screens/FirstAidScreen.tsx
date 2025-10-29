@@ -37,7 +37,7 @@ const FirstAidScreen = ({ setCurrentScreen, previousScreen }: FirstAidScreenProp
             <Text style={styles.title}>FIRST AID</Text>
 
            <Image
-             source={require("../assets/firstaid.jpg")}
+             source={{uri:"https://advtechonline-my.sharepoint.com/personal/st10486576_vcconnect_edu_za/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fst10486576%5Fvcconnect%5Fedu%5Fza%2FDocuments%2FMicrosoft%20Teams%20Chat%20Files%2Ffirst%2Daid%2Ejpg&parent=%2Fpersonal%2Fst10486576%5Fvcconnect%5Fedu%5Fza%2FDocuments%2FMicrosoft%20Teams%20Chat%20Files&ga=1"}}
              style={styles.image}
              resizeMode="cover"
             />
