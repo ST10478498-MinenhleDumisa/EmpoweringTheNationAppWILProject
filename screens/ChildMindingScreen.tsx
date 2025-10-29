@@ -1,4 +1,6 @@
+import React from "react";
 import { View, Text, Image, StyleSheet, ScrollView, ImageBackground, Button } from "react-native";
+import { ScreenType } from "../App";
 
 type RootStackParamList = {
   Home: undefined;

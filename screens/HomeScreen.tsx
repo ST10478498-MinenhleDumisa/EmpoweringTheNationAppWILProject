@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet, Text, View, ScrollView, TouchableOpacity } from "react-native";
 import { ScreenType } from "../App";
  
-interface HomeScreenProps{
+interface HomeScreenProps{ 
     setCurrentScreen: (screen: ScreenType) => void;
     previousScreen: ScreenType;
 }

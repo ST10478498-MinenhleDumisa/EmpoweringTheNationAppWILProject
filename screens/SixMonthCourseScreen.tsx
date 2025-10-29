@@ -18,6 +18,8 @@ const SixMonthCourseScreen: React.FC<SixMonthCourseScreenProps> = ({ setCurrentS
         </ScrollView>
     );
 };
+
+
  
 const styles = StyleSheet.create({
     container: {

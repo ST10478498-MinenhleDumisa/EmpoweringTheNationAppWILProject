@@ -8,8 +8,13 @@ import SixWeekCourseScreen from "./screens/SixWeekCourseScreen";
 import ViewCourseScreen from "./screens/ViewCourseScreen";
 import ContactUsScreen from "./screens/ContactUsScreen";
 import FeesCalculator from "./screens/FeesCalculatorScreen";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import ChildMindingScreen from "./screens/ChildMindingScreen";
+import CookingScreen from "./screens/CookingScreen";
+import FirstAidScreen from "./screens/FirstAidScreen";
+import GardeningMaintenanceScreen from "./screens/GardeningMaintenanceScreen";
+import LandscapingScreen from "./screens/LandscapingScreen";
+import LifeSkillsScreen from "./screens/LifeSkillsScreen";
+import SewingScreen from "./screens/SewingScreen";
  
  
  
