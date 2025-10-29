@@ -45,7 +45,7 @@ export type ScreenType =
   | "LANDSCAPING"
   | "LIFE SKILLS"
   | "CHILD MINDING"
-  | "GARDEN MAINTANANCE"
+  | "GARDEN MAINTENANCE"
   | "COOKING"
   | "ViewCourse";
  
@@ -70,6 +70,20 @@ export type ScreenType =
             return <ContactUsScreen setCurrentScreen={setCurrentScreen} previousScreen={currentScreen}/>;
           case "Fees Calculator":
             return <FeesCalculator setCurrentScreen={setCurrentScreen} previousScreen={currentScreen}/>;
+          case "CHILD MINDING": 
+            return <ChildMindingScreen setCurrentScreen={setCurrentScreen} previousScreen={currentScreen}/>;
+          case "COOKING": 
+            return <CookingScreen setCurrentScreen={setCurrentScreen} previousScreen={currentScreen}/>;
+          case "FIRST AID": 
+            return <FirstAidScreen setCurrentScreen={setCurrentScreen} previousScreen={currentScreen}/>;
+          case "GARDEN MAINTENANCE": 
+            return <GardeningMaintenanceScreen setCurrentScreen={setCurrentScreen} previousScreen={currentScreen}/>;
+          case "LANDSCAPING": 
+            return <LandscapingScreen setCurrentScreen={setCurrentScreen} previousScreen={currentScreen}/>;
+          case "LIFE SKILLS": 
+            return <LifeSkillsScreen setCurrentScreen={setCurrentScreen} previousScreen={currentScreen}/>;
+          case "SEWING": 
+            return <SewingScreen setCurrentScreen={setCurrentScreen} previousScreen={currentScreen}/>;
           case "ViewCourse":
             if (selectedCourse) {
               return <ViewCourseScreen
@@ -84,7 +98,7 @@ export type ScreenType =
           case "LANDSCAPING":
           case "LIFE SKILLS":
           case "CHILD MINDING":
-          case "GARDEN MAINTANANCE":
+          case "GARDEN MAINTENANCE":
           case "COOKING":
             // Create a mock course object for these static courses
             const staticCourse: Course = {

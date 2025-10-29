@@ -46,6 +46,48 @@ const Navigation: React.FC<NavigationProps> = ({currentScreen, setCurrentScreen}
                 onPress={() => setCurrentScreen("ViewCourse")}>
                 <Text style={styles.navButtonText}>Read More</Text>
                 </TouchableOpacity>
+
+                 <TouchableOpacity
+                style={[styles.navButton, currentScreen === "CHILD MINDING" && styles.navButtonActive]}
+                onPress={() => setCurrentScreen("CHILD MINDING")}>
+                <Text style={styles.navButtonText}>Read More</Text>
+                </TouchableOpacity>
+
+                 <TouchableOpacity
+                style={[styles.navButton, currentScreen === "FIRST AID" && styles.navButtonActive]}
+                onPress={() => setCurrentScreen("FIRST AID")}>
+                <Text style={styles.navButtonText}>Read More</Text>
+                </TouchableOpacity>
+
+                 <TouchableOpacity
+                style={[styles.navButton, currentScreen === "GARDEN MAINTENANCE" && styles.navButtonActive]}
+                onPress={() => setCurrentScreen("GARDEN MAINTENANCE")}>
+                <Text style={styles.navButtonText}>Read More</Text>
+                </TouchableOpacity>
+
+                 <TouchableOpacity
+                style={[styles.navButton, currentScreen === "LANDSCAPING" && styles.navButtonActive]}
+                onPress={() => setCurrentScreen("LANDSCAPING")}>
+                <Text style={styles.navButtonText}>Read More</Text>
+                </TouchableOpacity>
+
+                 <TouchableOpacity
+                style={[styles.navButton, currentScreen === "SEWING" && styles.navButtonActive]}
+                onPress={() => setCurrentScreen("SEWING")}>
+                <Text style={styles.navButtonText}>Read More</Text>
+                </TouchableOpacity>
+
+                 <TouchableOpacity
+                style={[styles.navButton, currentScreen === "LIFE SKILLS" && styles.navButtonActive]}
+                onPress={() => setCurrentScreen("LIFE SKILLS")}>
+                <Text style={styles.navButtonText}>Read More</Text>
+                </TouchableOpacity>
+
+                 <TouchableOpacity
+                style={[styles.navButton, currentScreen === "COOKING" && styles.navButtonActive]}
+                onPress={() => setCurrentScreen("COOKING")}>
+                <Text style={styles.navButtonText}>Read More</Text>
+                </TouchableOpacity>
             </ScrollView>
         </View>
     );
