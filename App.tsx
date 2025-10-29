@@ -65,7 +65,7 @@ export enum ScreenType {
           case "6-MONTH COURSE":
             return <SixMonthCourseScreen setCurrentScreen={setCurrentScreen} previousScreen={currentScreen}/>;
           case "6-WEEK COURSE":
-            return <SixWeekCourseScreen setCurrentScreen={setCurrentScreen} previousScreen={currentScreen}/>;
+            return <SixWeekCourseScreen setCurrentScreen={setCurrentScreen} previousScreen={currentScreen} onSelectCourse={handleSelectCourse} />;
           case "CONTACT US":
             return <ContactUsScreen setCurrentScreen={setCurrentScreen} previousScreen={currentScreen}/>;
           case "FEES CALCULATOR":

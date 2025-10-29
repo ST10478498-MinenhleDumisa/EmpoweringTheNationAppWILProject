@@ -5,15 +5,13 @@ import {
     View,
     ScrollView,
     TouchableOpacity,
-    Image, // Added Image import
-    SafeAreaView, // Added SafeAreaView import
-    Dimensions, // Added Dimensions import
+    Image, 
+    SafeAreaView, 
+    Dimensions, 
 } from "react-native";
-import { ScreenType } from "../App"; // Ensure ScreenType is correctly imported
+import { ScreenType } from "../App"; 
 
 const { width } = Dimensions.get('window');
-
-// --- 1. TYPESCRIPT INTERFACE ---
 interface Course {
     title: string;
     description: string;
@@ -21,13 +19,13 @@ interface Course {
     imageUri: string;
 }
 
-// Interface for the main component props
 interface SixMonthCourseScreenProps {
     setCurrentScreen: (screen: ScreenType) => void;
     previousScreen: ScreenType;
 }
 
-// --- 2. COURSE DATA ARRAY ---
+
+
 const sixMonthCourses: Course[] = [
   {
     title: 'FIRST AID',
@@ -82,19 +80,17 @@ const sixMonthCourses: Course[] = [
   },
 ];
 
-// --- 3. COURSE CARD COMPONENT (now accepts navigation function) ---
+
 const CourseCard: React.FC<{ course: Course, setCurrentScreen: (screen: ScreenType) => void }> = ({ course, setCurrentScreen }) => {
   
-    // Map the title string to the corresponding ScreenType enum value
+   
    const getScreenType = (title: string): ScreenType => {
     switch (title) {
-        // FIX: The error is here! You must remove the redundant 'ScreenType.' prefix in the return statement.
-        // It should be 'case VALUE: return ENUM.MEMBER;'
         case 'FIRST AID': return ScreenType.FirstAid;
         case 'SEWING': return ScreenType.Sewing;
         case 'LIFE SKILLS': return ScreenType.LifeSkills;
         case 'LANDSCAPING': return ScreenType.Landscaping;
-        default: return ScreenType.Home; // Assuming HOME is the fallback
+        default: return ScreenType.Home; 
     }
 };
     
@@ -242,8 +238,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
         color: '#2E7D32',
     },
-    
-    // --- Card List Styles ---
+
     cardList: {
         width: '100%',
         alignItems: 'center',
