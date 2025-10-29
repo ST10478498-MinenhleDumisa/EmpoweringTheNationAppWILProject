@@ -1,122 +1,135 @@
 import React from "react";
-import { StyleSheet, Text, View, TouchableOpacity, ScrollView  } from "react-native";
-import { ScreenType } from "../App";
- 
+import { StyleSheet, Text, View, TouchableOpacity, ScrollView } from "react-native";
+import { ScreenType } from "../App"; // Ensure this path is correct
+ 
 interface NavigationProps{
-    currentScreen: ScreenType;
-    setCurrentScreen: (screen: ScreenType) => void;
+    currentScreen: ScreenType;
+    setCurrentScreen: (screen: ScreenType) => void;
 }
- 
+ 
 const Navigation: React.FC<NavigationProps> = ({currentScreen, setCurrentScreen}) => {
-    return(
-        <View style={styles.navContainer}>
-            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
-                <TouchableOpacity
-                style={[styles.navButton, currentScreen === "Home" && styles.navButtonActive]}
-                onPress={() => setCurrentScreen("Home")}>
-                <Text style={styles.navButtonText}>Home</Text>
-                </TouchableOpacity>
- 
-                <TouchableOpacity
-                style={[styles.navButton, currentScreen === "6-Month Course" && styles.navButtonActive]}
-                onPress={() => setCurrentScreen("6-Month Course")}>
-                <Text style={styles.navButtonText}>6 Month Course</Text>
-                </TouchableOpacity>
- 
-                <TouchableOpacity
-                style={[styles.navButton, currentScreen === "6-Week Course" && styles.navButtonActive]}
-                onPress={() => setCurrentScreen("6-Week Course")}>
-                <Text style={styles.navButtonText}>6 Week Course</Text>
-                </TouchableOpacity>
- 
-                <TouchableOpacity
-                style={[styles.navButton, currentScreen === "Fees Calculator" && styles.navButtonActive]}
-                onPress={() => setCurrentScreen("Fees Calculator")}>
-                <Text style={styles.navButtonText}>Checkout</Text>
-                </TouchableOpacity>
- 
-                <TouchableOpacity
-                style={[styles.navButton, currentScreen === "Contact Us" && styles.navButtonActive]}
-                onPress={() => setCurrentScreen("Contact Us")}>
-                <Text style={styles.navButtonText}>Contacts</Text>
-                </TouchableOpacity>
- 
-                 <TouchableOpacity
-                style={[styles.navButton, currentScreen === "ViewCourse" && styles.navButtonActive]}
-                onPress={() => setCurrentScreen("ViewCourse")}>
-                <Text style={styles.navButtonText}>Read More</Text>
-                </TouchableOpacity>
+    return(
+        <View style={styles.navContainer}>
+            <ScrollView horizontal showsHorizontalScrollIndicator={false}>
+                <TouchableOpacity
+                // FIX: Use ScreenType.Home for comparison and onPress
+                style={[styles.navButton, currentScreen === ScreenType.Home && styles.navButtonActive]}
+                onPress={() => setCurrentScreen(ScreenType.Home)}>
+                <Text style={styles.navButtonText}>Home</Text>
+                </TouchableOpacity>
+ 
+                <TouchableOpacity
+                // FIX: Use ScreenType.SixMonthCourse for comparison and onPress
+                style={[styles.navButton, currentScreen === ScreenType.SixMonthCourse && styles.navButtonActive]}
+                onPress={() => setCurrentScreen(ScreenType.SixMonthCourse)}>
+                <Text style={styles.navButtonText}>6 Month Course</Text>
+                </TouchableOpacity>
+ 
+                <TouchableOpacity
+                // FIX: Use ScreenType.SixWeekCourse
+                style={[styles.navButton, currentScreen === ScreenType.SixWeekCourse && styles.navButtonActive]}
+                onPress={() => setCurrentScreen(ScreenType.SixWeekCourse)}>
+                <Text style={styles.navButtonText}>6 Week Course</Text>
+                </TouchableOpacity>
+ 
+                <TouchableOpacity
+                // FIX: Use ScreenType.FeesCalculator
+                style={[styles.navButton, currentScreen === ScreenType.FeesCalculator && styles.navButtonActive]}
+                onPress={() => setCurrentScreen(ScreenType.FeesCalculator)}>
+                <Text style={styles.navButtonText}>Checkout</Text>
+                </TouchableOpacity>
+ 
+                <TouchableOpacity
+                // FIX: Use ScreenType.ContactUs
+                style={[styles.navButton, currentScreen === ScreenType.ContactUs && styles.navButtonActive]}
+                onPress={() => setCurrentScreen(ScreenType.ContactUs)}>
+                <Text style={styles.navButtonText}>Contacts</Text>
+                </TouchableOpacity>
+ 
+                 <TouchableOpacity
+                // FIX: Use ScreenType.ViewCourse
+                style={[styles.navButton, currentScreen === ScreenType.ViewCourse && styles.navButtonActive]}
+                onPress={() => setCurrentScreen(ScreenType.ViewCourse)}>
+                <Text style={styles.navButtonText}>Read More</Text>
+                </TouchableOpacity>
 
-                 <TouchableOpacity
-                style={[styles.navButton, currentScreen === "CHILD MINDING" && styles.navButtonActive]}
-                onPress={() => setCurrentScreen("CHILD MINDING")}>
-                <Text style={styles.navButtonText}>Read More</Text>
-                </TouchableOpacity>
+                 <TouchableOpacity
+                // FIX: Use ScreenType.ChildMinding (Note: Fixed lowercase typo in onPress call)
+                style={[styles.navButton, currentScreen === ScreenType.ChildMinding && styles.navButtonActive]}
+                onPress={() => setCurrentScreen(ScreenType.ChildMinding)}>
+                <Text style={styles.navButtonText}>Read More</Text>
+                </TouchableOpacity>
 
-                 <TouchableOpacity
-                style={[styles.navButton, currentScreen === "FIRST AID" && styles.navButtonActive]}
-                onPress={() => setCurrentScreen("FIRST AID")}>
-                <Text style={styles.navButtonText}>Read More</Text>
-                </TouchableOpacity>
+                 <TouchableOpacity
+                // FIX: Use ScreenType.FirstAid
+                style={[styles.navButton, currentScreen === ScreenType.FirstAid && styles.navButtonActive]}
+                onPress={() => setCurrentScreen(ScreenType.FirstAid)}>
+                <Text style={styles.navButtonText}>Read More</Text>
+                </TouchableOpacity>
 
-                 <TouchableOpacity
-                style={[styles.navButton, currentScreen === "GARDEN MAINTENANCE" && styles.navButtonActive]}
-                onPress={() => setCurrentScreen("GARDEN MAINTENANCE")}>
-                <Text style={styles.navButtonText}>Read More</Text>
-                </TouchableOpacity>
+                 <TouchableOpacity
+                // FIX: Use ScreenType.GardenMaintenance
+                style={[styles.navButton, currentScreen === ScreenType.GardenMaintenance && styles.navButtonActive]}
+                onPress={() => setCurrentScreen(ScreenType.GardenMaintenance)}>
+                <Text style={styles.navButtonText}>Read More</Text>
+                </TouchableOpacity>
 
-                 <TouchableOpacity
-                style={[styles.navButton, currentScreen === "LANDSCAPING" && styles.navButtonActive]}
-                onPress={() => setCurrentScreen("LANDSCAPING")}>
-                <Text style={styles.navButtonText}>Read More</Text>
-                </TouchableOpacity>
+                 <TouchableOpacity
+                // FIX: Use ScreenType.Landscaping
+                style={[styles.navButton, currentScreen === ScreenType.Landscaping && styles.navButtonActive]}
+                onPress={() => setCurrentScreen(ScreenType.Landscaping)}>
+                <Text style={styles.navButtonText}>Read More</Text>
+                </TouchableOpacity>
 
-                 <TouchableOpacity
-                style={[styles.navButton, currentScreen === "SEWING" && styles.navButtonActive]}
-                onPress={() => setCurrentScreen("SEWING")}>
-                <Text style={styles.navButtonText}>Read More</Text>
-                </TouchableOpacity>
+                 <TouchableOpacity
+                // FIX: Use ScreenType.Sewing
+                style={[styles.navButton, currentScreen === ScreenType.Sewing && styles.navButtonActive]}
+                onPress={() => setCurrentScreen(ScreenType.Sewing)}>
+                <Text style={styles.navButtonText}>Read More</Text>
+                </TouchableOpacity>
 
-                 <TouchableOpacity
-                style={[styles.navButton, currentScreen === "LIFE SKILLS" && styles.navButtonActive]}
-                onPress={() => setCurrentScreen("LIFE SKILLS")}>
-                <Text style={styles.navButtonText}>Read More</Text>
-                </TouchableOpacity>
+                 <TouchableOpacity
+                // FIX: Use ScreenType.LifeSkills
+                style={[styles.navButton, currentScreen === ScreenType.LifeSkills && styles.navButtonActive]}
+                onPress={() => setCurrentScreen(ScreenType.LifeSkills)}>
+                <Text style={styles.navButtonText}>Read More</Text>
+                </TouchableOpacity>
 
-                 <TouchableOpacity
-                style={[styles.navButton, currentScreen === "COOKING" && styles.navButtonActive]}
-                onPress={() => setCurrentScreen("COOKING")}>
-                <Text style={styles.navButtonText}>Read More</Text>
-                </TouchableOpacity>
-            </ScrollView>
-        </View>
-    );
+                 <TouchableOpacity
+                // FIX: Use ScreenType.Cooking
+                style={[styles.navButton, currentScreen === ScreenType.Cooking && styles.navButtonActive]}
+                onPress={() => setCurrentScreen(ScreenType.Cooking)}>
+                <Text style={styles.navButtonText}>Read More</Text>
+                </TouchableOpacity>
+            </ScrollView>
+        </View>
+    );
 };
- 
+ 
 const styles = StyleSheet.create({
-    navContainer: {
-        backgroundColor: "#92c3a5",
-        paddingVertical: 10,
-        borderBottomWidth: 1,
-        borderBottomColor: "#92c3a5"
-    },
- 
-    navButton: {
-        paddingHorizontal: 20,
-        paddingVertical: 12,
-        marginHorizontal: 5,
-    },
- 
-    navButtonActive: {
-        backgroundColor: "#4b9960",
-        borderRadius: 5,
-    },
- 
-    navButtonText: {
-        color: "#ffffff",
-        fontSize: 15,
-        fontWeight: "600",
-    },
+    navContainer: {
+        backgroundColor: "#92c3a5",
+        paddingVertical: 10,
+        borderBottomWidth: 1,
+        borderBottomColor: "#92c3a5"
+    },
+ 
+    navButton: {
+        paddingHorizontal: 20,
+        paddingVertical: 12,
+        marginHorizontal: 5,
+    },
+ 
+    navButtonActive: {
+        backgroundColor: "#4b9960",
+        borderRadius: 5,
+    },
+ 
+    navButtonText: {
+        color: "#ffffff",
+        fontSize: 15,
+        fontWeight: "600",
+    },
 });
- 
+ 
 export default Navigation;

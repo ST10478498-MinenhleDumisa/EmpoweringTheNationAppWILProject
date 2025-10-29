@@ -33,42 +33,42 @@ export interface CourseListProps {
  
 }
  
-export type ScreenType =
-  | "Home"
-  | "6-Month Course"
-  | "6-Week Course"
-  | "Contact Us"
-  | "Fees Calculator"
-  | "Details Screen"
-  | "FIRST AID"
-  | "SEWING"
-  | "LANDSCAPING"
-  | "LIFE SKILLS"
-  | "CHILD MINDING"
-  | "GARDEN MAINTENANCE"
-  | "COOKING"
-  | "ViewCourse";
+export enum ScreenType {
+    Home = 'HOME',
+    SixMonthCourse = '6-MONTH COURSE', // Added for completeness, if used
+    SixWeekCourse = '6-WEEK COURSE',
+    ContactUs = 'CONTACT US',
+    FeesCalculator = 'FEES CALCULATOR',
+    ChildMinding = 'CHILD MINDING',
+    Cooking = 'COOKING',
+    FirstAid = 'FIRST AID',
+    GardenMaintenance = 'GARDEN MAINTENANCE',
+    Landscaping = 'LANDSCAPING',
+    LifeSkills = 'LIFE SKILLS',
+    Sewing = 'SEWING',
+    ViewCourse = 'VIEW COURSE',
+}
  
   export default function NavigationApp() {
-    const [currentScreen, setCurrentScreen] = useState<ScreenType>("Home");
-    const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
-   
-    const handleSelectCourse = (course: Course) => {
-      setSelectedCourse(course);
-      setCurrentScreen("ViewCourse");
+    const [currentScreen, setCurrentScreen] = useState<ScreenType>(ScreenType.Home); 
+    const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+   
+    const handleSelectCourse = (course: Course) => {
+      setSelectedCourse(course);
+      setCurrentScreen(ScreenType.ViewCourse);
     }
  
       const MainScreen = () =>{
         switch(currentScreen){
-          case "Home":
+          case "HOME":
             return <HomeScreen setCurrentScreen={setCurrentScreen} previousScreen={currentScreen}/>;
-          case "6-Month Course":
+          case "6-MONTH COURSE":
             return <SixMonthCourseScreen setCurrentScreen={setCurrentScreen} previousScreen={currentScreen}/>;
-          case "6-Week Course":
+          case "6-WEEK COURSE":
             return <SixWeekCourseScreen setCurrentScreen={setCurrentScreen} previousScreen={currentScreen}/>;
-          case "Contact Us":
+          case "CONTACT US":
             return <ContactUsScreen setCurrentScreen={setCurrentScreen} previousScreen={currentScreen}/>;
-          case "Fees Calculator":
+          case "FEES CALCULATOR":
             return <FeesCalculator setCurrentScreen={setCurrentScreen} previousScreen={currentScreen}/>;
           case "CHILD MINDING": 
             return <ChildMindingScreen setCurrentScreen={setCurrentScreen} previousScreen={currentScreen}/>;
@@ -84,7 +84,7 @@ export type ScreenType =
             return <LifeSkillsScreen setCurrentScreen={setCurrentScreen} previousScreen={currentScreen}/>;
           case "SEWING": 
             return <SewingScreen setCurrentScreen={setCurrentScreen} previousScreen={currentScreen}/>;
-          case "ViewCourse":
+          case "VIEW COURSE":
             if (selectedCourse) {
               return <ViewCourseScreen
                 setCurrentScreen={setCurrentScreen}

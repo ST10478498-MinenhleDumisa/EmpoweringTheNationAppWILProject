@@ -27,7 +27,7 @@ const FirstAidScreen = ({ setCurrentScreen, previousScreen }: FirstAidScreenProp
 
          <View style={styles.header}>
            <Image
-              source={require("../assets/logo.png")} 
+              source={{uri:"https://image2url.com/images/1761641337035-8afdaa78-89a6-4950-90c6-a6b3d03bb275.png"}} 
               style={styles.logo}
               resizeMode="contain"
            />
